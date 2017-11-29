@@ -5,7 +5,7 @@ public class FrequencyOfWords
 	static int count;
 	public static void main(String[] args)
 	{
-	String str="Life is Life is Beautiful file is Life is Music file";
+	String str="Welcome come To To TYSS";
 	
 	String[] s=str.split(" ");
 	
@@ -16,19 +16,21 @@ public class FrequencyOfWords
 		
 			for(int j=i+1;j<s.length;j++)
 			{
-				if(s[i].equals(s[j]))
-				
+				if(s[i].equals(s[j]))				
 				{
 				s[j]=" ";
 				count++;
 							
-				}		        
+				}
+				
 			} 
 		
 			if(s[i]!=" ")
+			{
+            //System.out.println(s[j]+count);
             System.out.println(s[i]+" : is present for "+count+" times");
-		
-      
+			
+			}
 		
 	}
 	

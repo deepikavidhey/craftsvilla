@@ -1,22 +1,60 @@
 package Sindura_assignments;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.TreeSet;
 
 public class ReverseASentenceWithSpecialChars
 {
 	      public static void main(String args[])
 	        {
-	                HashSet<Character> set = new HashSet<Character>();
-	                set.add(' ');
-	                set.add('@');
-	                set.add('#');
+	               /* HashSet<String> hset = new HashSet<String>();
+	                hset.add("Hi");
+	                hset.add(null);
+	                hset.add(" ");
+	                hset.add("Bi");
+	                hset.add(null);
+	                hset.add("Ai");
+	                System.out.println(hset);
 	                
+	                TreeSet<Character> tset = new TreeSet<Character>();
+	                tset.add('5');
+	                tset.add(' ');
+	                tset.add('1');
+	                tset.add('1');
+	                tset.add('2');
+	                System.out.println(tset);
+	                
+	                
+	                LinkedHashSet<Character> lhset = new LinkedHashSet<Character>();
+	                lhset.add('5');
+	                lhset.add(' ');
+	                lhset.add(null);
+	                lhset.add('1');
+	                lhset.add('1');
+	                lhset.add(null);
+	                lhset.add('2');
+	                System.out.println(lhset);
+	                
+	                if(tset.size()==lhset.size())
+	                	System.out.println(true);
+	                else
+	                	System.out.println(false);
+	                */
+	    	  
+	    	  
 	                String str="WE@LCOME TO# TYSS";
 	                char[] ch = str.toCharArray();
 	                System.out.println(ch);
 	                
+	                HashSet<String> hset = new HashSet<String>();
+	                hset.add(" ");
+	                hset.add("@");
+	                hset.add("#");
 	                int l = 0;	                
 	                int r = ch.length - 1;
+
+	                //if(Character.isAlphabetic(ch(l)))
 	                
 	                for (int i = 0; i < ch.length; i++)
 	                {
@@ -25,7 +63,7 @@ public class ReverseASentenceWithSpecialChars
 	                        {
 	                                break;
 	                        }
-	                        if (!set.contains(ch[l]) && !set.contains(ch[r]))
+	                        if (!hset.contains(ch[l]) && !hset.contains(ch[r]))
 	                        {
 	                                char temp = ch[l];
 	                                ch[l] = ch[r];
@@ -34,9 +72,9 @@ public class ReverseASentenceWithSpecialChars
 	                                l++;
 	                                r--;
 	                        }
-	                        else if (set.contains(ch[l]))
+	                        else if (hset.contains(ch[l]))
 	                                l++;
-	                    else if (set.contains(ch[r]))
+	                    else if (hset.contains(ch[r]))
 	                                r--;
 	                }
 	                

@@ -1,5 +1,6 @@
 package com.craftsvilla.test;
 
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -38,7 +39,7 @@ public class gmailScript
 		
 		
 		String s = driver.getWindowHandle();
-	driver.switchTo().window(s);
+		driver.switchTo().window(s);
 		
 		driver.findElement(By.xpath("//img[@class='Ha']")).click();
 		Thread.sleep(2000);

@@ -10,7 +10,8 @@ public class ArnstrongNumber
 				    /*Scanner sc=new Scanner(System.in);
 				    System.out.println("Please enter a number");
 				    int n=sc.nextInt();*/
-				    int n=351;
+				    int n=153;
+				    int k=String.valueOf(n).length();
 				    temp=n;			    
 			
 				    while(n>0)  
@@ -18,7 +19,7 @@ public class ArnstrongNumber
 				    rem=n%10;  
 				    n=n/10;  
 				  //  System.out.println(rem);
-				    c=c+(int)Math.pow(rem, 3);
+				    c=c+(int)Math.pow(rem, k);
 				    }  
 				    
 				    if(temp==c)  

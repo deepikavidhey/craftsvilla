@@ -20,8 +20,8 @@ public class Demo1 {
 			WebDriver driver=new ChromeDriver();
 	    	driver.get("https://www.google.com");
 	    	driver.manage().window().maximize();
-	    	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-	    	driver.findElement(By.id("lst-ib")).sendKeys("baggit sling bags");
+	    //	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+	    //	driver.findElement(By.id("lst-ib")).sendKeys("baggit sling bags");
 	    	try
 	    	{
 	    		Robot r=new Robot();
@@ -30,8 +30,10 @@ public class Demo1 {
 	    		r.keyRelease(KeyEvent.VK_SPACE);
 	    		r.keyRelease(KeyEvent.VK_ALT);
 	    		Thread.sleep(2000);
-	    		r.keyPress(KeyEvent.VK_N);
-	    		r.keyRelease(KeyEvent.VK_N);
+	  /*  		r.keyPress(KeyEvent.VK_N);
+	    		r.keyRelease(KeyEvent.VK_N);*/
+	    		r.keyPress(KeyEvent.VK_C);
+	    		r.keyRelease(KeyEvent.VK_C);
 	    	
 	    	}
 	    	
@@ -41,9 +43,9 @@ public class Demo1 {
 	    		
 	    	}
 	    	
+	    	
 
-
-  	driver.close();
+  //	driver.close();
 		}}
 
 	

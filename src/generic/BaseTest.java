@@ -17,15 +17,15 @@ import org.testng.annotations.Listeners;
 public abstract class BaseTest implements IAutoConst {
 	public static WebDriver driver;
 
-//	public static Logger log;
+	public static Logger log;
 	
 	
 
 	@BeforeMethod(alwaysRun = true)
 	public void LaunchApp() {
-		/*BasicConfigurator.configure();
+		//BasicConfigurator.configure();
 		log = Logger.getLogger("log4j.log");
-		log.info("sdffsdfsdfsdf");*/
+		//log.info("sdffsdfsdfsdf");*/
 		System.setProperty(CHROMEKEY, CHROMEVALUE);
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();

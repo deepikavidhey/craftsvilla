@@ -5,7 +5,7 @@ public class Pattern1 {
 	{
 		int m=4,n=4;
 		
-		for(int i=1;i<=m;i++)
+		/*for(int i=1;i<=m;i++)
 		{			
 			for(int j=1;j<=n;j++)
 			{
@@ -18,7 +18,7 @@ public class Pattern1 {
 			}
 			System.out.println();
 			
-		/*} //int l=10;
+		} //int l=10;
 		for(int i=1;i<=m;i++)
 		{
 			for(int j=1;j<=n;j++)
@@ -29,10 +29,23 @@ public class Pattern1 {
 					System.out.print(" ");
 			}
 
-			System.out.println();*/
+			System.out.println();
 			
-		}
+		}*/
 
+		
+		for(int i=1;i<=m;i++)
+		{
+			for(int j=1;j<=n;j++)
+			{
+				if(i+j>=n+1)
+					System.out.print("*"+" ");
+				else
+					System.out.print(" ");
+			}
+			System.out.println();
+		}
+			
 	}
 
 }

@@ -9,12 +9,13 @@ public class ReverseTheWords {
 	                
 	                System.out.println(str);
 
-	                for(int i=0;i<s1.length;i++)
+	           //     for(int i=0;i<s1.length;i++)
 	                {
-	                	for(int j=s1[i].length()-1;j>=0;j--)
+	                	for(int j=s1[0].length()-1;j>=0;j--)
 	                	{
-	                		System.out.print(s1[i].charAt(j));
-	                	}System.out.print(" ");
+	                		System.out.print(s1[0].charAt(j));
+	                	}
+	                	System.out.print(" "+str.substring(s1[0].length()));
 	                	
 	                      
 	        }
