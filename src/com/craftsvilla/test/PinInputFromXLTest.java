@@ -10,6 +10,7 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 //import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,7 +28,7 @@ public class PinInputFromXLTest //implements IAutoConst
 	{
 		WebDriver driver=new ChromeDriver();
 		driver.get("http://www.craftsvilla.com");
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.MINUTES);
 		driver.manage().window().maximize();
 		//Robot r= new Robot();
 		
@@ -35,15 +36,18 @@ public class PinInputFromXLTest //implements IAutoConst
 		
 		WebElement we=driver.findElement(By.xpath("//a[contains(@href,'megamenu_sarees_seeall')]"));
 		we.click();
-		Thread.sleep(2000);
-		WebElement we1 = driver.findElement(By.xpath("//*[@id='listProducts']/..//img[contains(@src,'1497084488')]"));
+	//System.out.println(we.getCssValue("font-family")+"------------------------------------");
+		
+		WebElement we1 = driver.findElement(By.xpath("//*[@id='listProducts']/div[1]/div[1]/div/div[1]/a/img"));
 		we1.click();
 		
 		
-		FileInputStream fis=new FileInputStream("/home/tyss/Desktop/pincheck1.xlsx");
+		FileInputStream fis=new FileInputStream("/home/tyss/Desktop/DeepPractice/Automation/pincheck1.xlsx");
 		Workbook wb=WorkbookFactory.create(fis);
 	
 		int n = wb.getSheet("Sheet1").getLastRowNum();
+		
+				System.out.println(n);
 	
 		for(int i=1;i<=n;i++)
 		{			
@@ -59,9 +63,9 @@ public class PinInputFromXLTest //implements IAutoConst
 			Thread.sleep(2000);
 			
 			
-			/*
+			
 			JavascriptExecutor js=(JavascriptExecutor)driver;
-			js.executeScript("arguments[0].click()",pin4);*/
+			js.executeScript("arguments[0].click()",pin4);
 			
 			
 			WebElement pinchk1 = driver.findElement(By.xpath("//button[@id='submitpincode']"));

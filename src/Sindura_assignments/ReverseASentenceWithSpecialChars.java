@@ -8,7 +8,7 @@ public class ReverseASentenceWithSpecialChars
 {
 	      public static void main(String args[])
 	        {
-	               /* HashSet<String> hset = new HashSet<String>();
+	                HashSet<String> hset = new HashSet<String>();
 	                hset.add("Hi");
 	                hset.add(null);
 	                hset.add(" ");
@@ -17,12 +17,13 @@ public class ReverseASentenceWithSpecialChars
 	                hset.add("Ai");
 	                System.out.println(hset);
 	                
-	                TreeSet<Character> tset = new TreeSet<Character>();
-	                tset.add('5');
-	                tset.add(' ');
-	                tset.add('1');
-	                tset.add('1');
-	                tset.add('2');
+	                TreeSet<String> tset = new TreeSet<String>();
+	                tset.add("Hi");
+	            //    tset.add(null);
+	                tset.add(" ");
+	                tset.add("Bi");
+	           //     tset.add(null);
+	                tset.add("Ai");
 	                System.out.println(tset);
 	                
 	                
@@ -40,10 +41,10 @@ public class ReverseASentenceWithSpecialChars
 	                	System.out.println(true);
 	                else
 	                	System.out.println(false);
-	                */
+	                
 	    	  
 	    	  
-	                String str="WE@LCOME TO# TYSS";
+	               /* String str="WE@LCOME TO# TYSS";
 	                char[] ch = str.toCharArray();
 	                System.out.println(ch);
 	                
@@ -52,11 +53,11 @@ public class ReverseASentenceWithSpecialChars
 	                hset.add("@");
 	                hset.add("#");
 	                int l = 0;	                
-	                int r = ch.length - 1;
+	                int r = ch.length - 1;*/
 
 	                //if(Character.isAlphabetic(ch(l)))
 	                
-	                for (int i = 0; i < ch.length; i++)
+	              /*  for (int i = 0; i < ch.length; i++)
 	                {
 
 	                        if (l>=r)
@@ -80,7 +81,7 @@ public class ReverseASentenceWithSpecialChars
 	                
 	                System.out.println(ch);
 	    	  
-	    	  
+	    	  */
 	
 	        }
 }

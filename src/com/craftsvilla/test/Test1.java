@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.Rectangle;
 import java.awt.Robot;
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -48,13 +49,34 @@ public class Test1
 		driver.manage().window().maximize();
 		
 		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeScript("alert('Hi')");
+		js.executeScript("alert('Hi')");		
 		
 		Alert alert=driver.switchTo().alert();
 		System.out.println(alert.getText());
 		alert.dismiss();
-		String s = driver.getWindowHandle();
-		driver.switchTo().window(s);
+Thread.sleep(5000);
+		
+
+try{
+Robot r=new Robot();
+		r.keyPress(KeyEvent.VK_ALT);
+		r.keyPress(KeyEvent.VK_SPACE);
+		r.keyRelease(KeyEvent.VK_SPACE);
+		r.keyRelease(KeyEvent.VK_SPACE);
+		r.keyPress(KeyEvent.VK_C);
+		r.keyRelease(KeyEvent.VK_C);
+}
+catch(Exception e)
+{
+	//js.executeScript("window.scrollBy(0,500)");
+}
+		finally
+		{System.out.println("Bye");
+			driver.quit();
+		}
+	
+	/*	String s = driver.getWindowHandle();
+		driver.switchTo().window(s);*/
 		
 		/*SimpleDateFormat sdf=new SimpleDateFormat("dd_MM_yy_hh_mm_ss");
 		String v = sdf.format(new Date());

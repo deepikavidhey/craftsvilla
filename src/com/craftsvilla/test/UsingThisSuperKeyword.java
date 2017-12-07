@@ -7,26 +7,27 @@ public class UsingThisSuperKeyword extends Demo1{
 	public static int i,j;
 	public UsingThisSuperKeyword()
 	{
-		this(i);
+		this(10);
 		System.out.println("Current CLASS NO ARGUMENTS CONSTRUCTOR");
 	
 	}
 	public UsingThisSuperKeyword(int i)
 	{
-		this(20,20);
-	System.out.println("Current CLASS ONE ARGUMENTS CONSTRUCTOR");
+		this(i,j);
+		
+	System.out.println(i+" Current CLASS ONE ARGUMENTS CONSTRUCTOR");
 	
 	}
 	public UsingThisSuperKeyword(int i,int j)
 	{
 		
 		super();
-		this.i=i;
-		this.j=j;
-		
-		System.out.println("Current CLASS TWO ARGUMENTS CONSTRUCTOR"+i+" "+j);
 	
+		
+		System.out.println("Current CLASS TWO ARGUMENTS CONSTRUCTOR"+i+" "+j);	
+		
 	}
+	
 	
 	public static void main(String[] args)
 	{
@@ -37,3 +38,4 @@ public class UsingThisSuperKeyword extends Demo1{
 	}
 
 }
+

@@ -2,7 +2,7 @@ package Sindura_assignments;
 
 public class Demo1 
 {
-	//public int i;
+//	public int i;
 	public Demo1()
 	{
 	System.out.println("SUPER CLASS CONSTRUCTOR");

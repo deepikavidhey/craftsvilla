@@ -21,9 +21,9 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class CustomListner implements ITestListener,IAutoConst
+public class CustomListner implements ITestListener
 {
-	
+WebDriver driver;
 	@Override
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
@@ -41,19 +41,19 @@ public class CustomListner implements ITestListener,IAutoConst
 	{
 		SimpleDateFormat sdf=new SimpleDateFormat("dd_MM_yy_hh_mm_ss");
 		String v = sdf.format(new Date());
-		/*//TakesScreenshot ts=(TakesScreenshot)driver;
+		TakesScreenshot ts=(TakesScreenshot)driver;
 		File src=ts.getScreenshotAs(OutputType.FILE);
-		File dst=new File("/home/tyss/Desktop/DeepPractice/Automation/TestFailedPics"+v+".png");
+		File dest=new File("/home/tyss/Desktop/DeepPractice/Automation/TestFailedPics"+v+".png");
 		try 
 		{
-			FileUtils.copyFile(src, dst);//copyFile(src,dst);
+			FileUtils.copyFile(src, dest);//copyFile(src,dst);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 		
-		*/
+		
 		Robot r;
 		try {
 			r = new Robot();
