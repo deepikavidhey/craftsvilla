@@ -2,12 +2,13 @@ package assignment;
 
 import java.util.Scanner;
 
-public class StringFind {
+public class StringFind
+{
 
 	public static void main(String[] args) 
 	{
-		String str="Test Yantra Test Software Solutions";
-		String[] s1=str.split(" ");	
+		String str="Test/Yantra/Test/Software/Solutions";
+		String[] s1=str.split("/");	
 		
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Please enter the letter");
@@ -18,6 +19,7 @@ public class StringFind {
 		{
 			if(s1[i].startsWith(j))
 				System.out.println(s1[i]);
+			
 		}
 	}
 
