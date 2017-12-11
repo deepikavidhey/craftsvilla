@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.Rectangle;
 import java.awt.Robot;
 import java.awt.Toolkit;
+import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -65,6 +66,7 @@ Robot r=new Robot();
 		r.keyRelease(KeyEvent.VK_SPACE);
 		r.keyPress(KeyEvent.VK_C);
 		r.keyRelease(KeyEvent.VK_C);
+		
 }
 catch(Exception e)
 {
@@ -72,7 +74,7 @@ catch(Exception e)
 }
 		finally
 		{System.out.println("Bye");
-			driver.quit();
+			//driver.quit();
 		}
 	
 	/*	String s = driver.getWindowHandle();
@@ -137,9 +139,10 @@ catch(Exception e)
 			//Downcasting
 			//RemoteWebDriver rwd=(RemoteWebDriver)driver;
 	//	log.info("Browser opened");
-		/*
+		
 		WebDriverWait wait=new WebDriverWait(driver,10);
-		wait.until(ExpectedConditions.titleIs("jumka"));*/
+		wait.until(ExpectedConditions.titleIs("jumka"));
+		wait.until(ExpectedConditions.alertIsPresent());
 	
 	}
 }
